@@ -1,0 +1,8 @@
+<application>
+  <component name="EventLogAllowedList">
+    <build recorder-id="MP" build-number="CL-252.26199.153" />
+    <build recorder-id="FUS" build-number="CL-252.26199.153" />
+    <build recorder-id="MLSE" build-number="CL-252.26199.153" />
+    <build recorder-id="ML" build-number="CL-252.26199.153" />
+  </component>
+</application>

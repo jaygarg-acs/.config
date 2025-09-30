@@ -1,0 +1,12 @@
+<keymap version="1" name="XWin copy" parent="Default for XWin">
+  <action id="AIAssistant.ToolWindow.ShowOrFocus">
+    <keyboard-shortcut first-keystroke="shift ctrl semicolon" />
+  </action>
+  <action id="ActivateTerminalToolWindow">
+    <keyboard-shortcut first-keystroke="alt f12" />
+    <keyboard-shortcut first-keystroke="shift ctrl comma" />
+  </action>
+  <action id="SearchEverywhere">
+    <keyboard-shortcut first-keystroke="shift ctrl g" />
+  </action>
+</keymap>

@@ -1,0 +1,10 @@
+<application>
+  <component name="TrustedSolutionStore">
+    <option name="trustedLocations">
+      <set>
+        <option value="$USER_HOME$/acs/TP_TrainingGen" />
+        <option value="$USER_HOME$/acs/TP_TrainingGen/.idea/.idea.TP_TrainingGen.dir" />
+      </set>
+    </option>
+  </component>
+</application>

@@ -1,0 +1,40 @@
+<application>
+  <component name="LangManager">
+    <option name="languageName" value="ObjectiveC" />
+  </component>
+  <component name="NotRoamableUiSettings">
+    <option name="fontSize" value="20.0" />
+    <option name="presentationModeIdeScale" value="1.75" />
+  </component>
+  <component name="PropertyService"><![CDATA[{
+  "keyToString": {
+    "Rad.Init.Cfg.1": "true",
+    "ask.about.ctrl.y.shortcut.v2": "true",
+    "evlsprt.252": "1996057f080",
+    "evlsprt3.252": "5",
+    "experimental.ui.on.first.startup": "true",
+    "experimental.ui.used.version": "252.26199.153",
+    "fileTypeChangedCounter": "1",
+    "fontSizeToResetConsole": "16.25",
+    "fontSizeToResetEditor": "16.25",
+    "idea.islands.enabled": "true",
+    "input.method.disabler.muted": "true",
+    "previousColorScheme": "_@user_Dark",
+    "registry.to.advanced.settings.migration.build": "CL-252.26199.153",
+    "terminal.is.new.user": "true",
+    "trial.state.last.state": "ACTIVE"
+  },
+  "keyToStringList": {
+    "fileTypeDetectors": [
+      "com.intellij.ide.scratch.ScratchFileServiceImpl$Detector",
+      "com.intellij.docker.dockerFile.DockerFileTypeDetector",
+      "com.jetbrains.rider.cpp.fileType.CppHeaderFileTypeDetector",
+      "com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector",
+      "com.intellij.database.vfs.DbStorageFileType$Detector",
+      "com.jetbrains.nodejs.util.NodeFileTypeDetector$JavaScriptFileTypeDetector",
+      "com.jetbrains.nodejs.util.NodeFileTypeDetector$TypeScriptFileTypeDetector",
+      "org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector"
+    ]
+  }
+}]]></component>
+</application>

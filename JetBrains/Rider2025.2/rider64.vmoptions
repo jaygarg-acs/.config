@@ -1,0 +1,4 @@
+-Xmx2048m
+-Dide.managed.by.toolbox=/opt/jetbrains-toolbox/bin/jetbrains-toolbox
+-Dtoolbox.notification.token=e831ecb2-c6fd-48ed-9746-d2d8799da66a
+-Dtoolbox.notification.portFile=/home/jgarg/.cache/JetBrains/Toolbox/ports/e90213c9-23b9-4a5a-90bb-c08e982f2476.port

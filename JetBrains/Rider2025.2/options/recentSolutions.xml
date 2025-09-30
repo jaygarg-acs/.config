@@ -1,0 +1,42 @@
+<application>
+  <component name="RiderRecentProjectsManager">
+    <option name="additionalInfo">
+      <map>
+        <entry key="$USER_HOME$/acs/TP_TrainingGen/TP_TrainingGen.uproject">
+          <value>
+            <RecentProjectMetaInfo frameTitle="TP_TrainingGen – ~/acs/TP_TrainingGen/README.md" projectWorkspaceId="337FPExSmmY5xEYEbAkmWqhbePK">
+              <option name="activationTimestamp" value="1758660197172" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="RD-252.26199.154" />
+              <option name="buildTimestamp" value="1758155280000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="8" />
+              </option>
+              <frame x="0" y="0" width="3840" height="2131" extendedState="6" />
+              <option name="productionCode" value="RD" />
+              <option name="projectOpenTimestamp" value="1758660197437" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/acs/TP_TrainingGen">
+          <value>
+            <RecentProjectMetaInfo displayName="TP_TrainingGen" frameTitle="TP_TrainingGen – GameInstanceMaster.h" opened="true" projectWorkspaceId="337FTlrLYVewoojdC2MTlnm3BxT">
+              <option name="activationTimestamp" value="1758666236778" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="RD-252.26199.154" />
+              <option name="buildTimestamp" value="1758155280000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="0" />
+              </option>
+              <frame x="1280" y="0" width="1280" height="2131" extendedState="6" />
+              <option name="metadata" value="TP_TrainingGen|" />
+              <option name="productionCode" value="RD" />
+              <option name="projectOpenTimestamp" value="1758660213845" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="lastOpenedProject" value="$USER_HOME$/acs/TP_TrainingGen" />
+  </component>
+</application>

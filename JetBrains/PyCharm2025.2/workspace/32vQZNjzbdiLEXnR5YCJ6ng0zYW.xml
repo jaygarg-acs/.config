@@ -1,0 +1,377 @@
+<project version="4">
+  <component name="BookmarksManager">
+    <option name="groups">
+      <GroupState>
+        <option name="name" value="PyCharmLearningProject" />
+      </GroupState>
+    </option>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="4b1c433e:BranchNodeDescriptor$Root" />
+        <item name="LOCAL" type="7ab31ef7:BranchNodeDescriptor$TopLevelGroup" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="4b1c433e:BranchNodeDescriptor$Root" />
+        <item name="HEAD" type="11d8e747:BranchNodeDescriptor$Head" />
+      </path>
+    </select>
+  </component>
+  <component name="FileEditorManager">
+    <leaf ideFingerprint="1p7s1ui5z34im" SIDE_TABS_SIZE_LIMIT_KEY="-1" />
+  </component>
+  <component name="FileTypeUsageLocalSummary"><![CDATA[{
+  "data": {
+    "Jupyter": {
+      "usageCount": 3,
+      "lastUsed": 1758299404035
+    },
+    "WebPreview": {
+      "usageCount": 1,
+      "lastUsed": 1758298626348
+    },
+    "Python": {
+      "usageCount": 7,
+      "lastUsed": 1758307539416
+    },
+    "Markdown": {
+      "usageCount": 1,
+      "lastUsed": 1758307380773
+    },
+    "YAML": {
+      "usageCount": 10,
+      "lastUsed": 1758309038815
+    },
+    "DIFF": {
+      "usageCount": 3,
+      "lastUsed": 1758309114423
+    }
+  }
+}]]></component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find />
+      <find>apple</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>orange</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/warehouse</dir>
+    </dirStrings>
+  </component>
+  <component name="FindInProjectScope">
+    <option name="directoryName" value="$PROJECT_DIR$/src/warehouse" />
+  </component>
+  <component name="GitBranchesPopupTreeState">
+    <expand>
+      <path>
+        <item name="TreeRoot" type="a5f834f:GitBranchesTreeModel$TreeRoot" />
+        <item name="RECENT" type="98a275ee:GitBranchType$RECENT" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="GitSEFilterConfiguration">{}</component>
+  <component name="IdeDocumentHistory"><![CDATA[{
+  "changedPaths": [
+    "/home/jgarg/.cache/JetBrains/PyCharm2025.2/demo/PyCharmLearningProject/welcome.py",
+    "/home/jgarg/.cache/JetBrains/PyCharm2025.2/demo/PyCharmLearningProject/src/sandbox.py",
+    "/home/jgarg/.cache/JetBrains/PyCharm2025.2/demo/PyCharmLearningProject/src/warehouse/__init__.py",
+    "/home/jgarg/.cache/JetBrains/PyCharm2025.2/demo/PyCharmLearningProject/git/puss_in_boots.yml",
+    "/home/jgarg/.cache/JetBrains/PyCharm2025.2/demo/PyCharmLearningProject/git/martian_cat.yml"
+  ]
+}]]></component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="JupyterTrust" id="eeaebd73-8934-4654-a7da-6f7a8aecaba8" />
+  <component name="LanguageUsageStatistics">
+    <language id="Jupyter">
+      <summary usageCount="3" lastUsage="1758299404035" />
+    </language>
+    <language id="Markdown">
+      <summary usageCount="1" lastUsage="1758307380774" />
+    </language>
+    <language id="Python">
+      <summary usageCount="7" lastUsage="1758307539416" />
+    </language>
+    <language id="yaml">
+      <summary usageCount="10" lastUsage="1758309038815" />
+    </language>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PyCharmLearningProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/jgarg/.cache/JetBrains/PyCharm2025.2/demo/PyCharmLearningProject}" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+          <presentation>
+            <attributes />
+            <data iconPath="expui/toolwindows/project.svg" iconPlugin="com.intellij" isLeaf="false" text="PyCharmLearningProject" />
+            <item name="PyCharmLearningProject" type="b2602c69:ProjectViewProjectNode" />
+            <presentation>
+              <attributes>
+                <map>
+                  <entry key="filePath" value="$PROJECT_DIR$" />
+                </map>
+              </attributes>
+              <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="PyCharmLearningProject" />
+              <item name="dir{file:///home/jgarg/.cache/JetBrains/PyCharm2025.2/demo/PyCharmLearningProject}" type="462c0819:PsiDirectoryNode" />
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/.venv" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/excludeRoot.svg" iconPlugin="com.intellij" isLeaf="false" text=".venv" />
+                <item name="dir{file:///home/jgarg/.cache/JetBrains/PyCharm2025.2/demo/PyCharmLearningProject/.venv}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/data" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="data" />
+                <item name="dir{file:///home/jgarg/.cache/JetBrains/PyCharm2025.2/demo/PyCharmLearningProject/data}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/git" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="git" />
+                <item name="dir{file:///home/jgarg/.cache/JetBrains/PyCharm2025.2/demo/PyCharmLearningProject/git}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/src" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/sourceRoot.svg" iconPlugin="com.intellij" isLeaf="false" text="src" />
+                <item name="dir{file:///home/jgarg/.cache/JetBrains/PyCharm2025.2/demo/PyCharmLearningProject/src}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/feature-trainer-version.txt" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/text.svg" iconPlugin="com.intellij" isLeaf="true" text="feature-trainer-version.txt" />
+                <item name="feature-trainer-version.txt" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/README.md" />
+                  </map>
+                </attributes>
+                <data iconPath="icons/expui/markdown.svg" iconPlugin="org.intellij.plugins.markdown" isLeaf="true" text="README.md" />
+                <item name="README.md" type="ab9368bb:PsiFileNode" />
+              </presentation>
+            </presentation>
+            <presentation>
+              <attributes />
+              <data iconPath="expui/nodes/library.svg" iconPlugin="com.intellij" isLeaf="false" text="External Libraries" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </presentation>
+            <presentation>
+              <attributes />
+              <data iconPath="expui/fileTypes/scratches.svg" iconPlugin="com.intellij" isLeaf="false" text="Scratches and Consoles" />
+              <item name="Scratches and Consoles" type="b85a3e1f:ScratchTreeStructureProvider$MyProjectNode" />
+            </presentation>
+          </presentation>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="ToolWindowManager">
+    <layoutV2>
+      <window_info id="Bookmarks" side_tool="true" />
+      <window_info id="Merge Requests" />
+      <window_info id="Backup and Sync History" />
+      <window_info id="Pull Requests" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24022865" />
+      <window_info id="Commit" order="1" weight="0.24022865" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.24022865" />
+      <window_info anchor="bottom" id="TODO" />
+      <window_info anchor="bottom" id="Find" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.33008555" />
+      <window_info anchor="bottom" id="Problems" order="1" />
+      <window_info anchor="bottom" id="Problems View" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="3" />
+      <window_info anchor="bottom" id="Services" order="4" />
+      <window_info anchor="bottom" id="Python Packages" order="5" weight="0.1" />
+      <window_info anchor="bottom" id="Python Console" order="6" weight="0.1" />
+      <window_info anchor="bottom" id="Run" order="7" show_stripe_button="false" weight="0.32995284" />
+      <window_info anchor="bottom" id="Debug" order="8" show_stripe_button="false" weight="0.32995284" />
+      <window_info anchor="right" id="Endpoints" />
+      <window_info anchor="right" id="documentation.v2" side_tool="true" />
+      <window_info anchor="right" id="Coverage" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
+      <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
+      <window_info anchor="right" id="Database" order="2" weight="0.25" />
+      <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.25" />
+      <window_info anchor="right" id="Plots" order="5" weight="0.1" />
+      <window_info anchor="right" id="Learn" order="6" weight="0.24022865" />
+      <unified_weights bottom="0.33008555" left="0.24022865" right="0.24022865" />
+    </layoutV2>
+    <recentWindows>
+      <value>Learn</value>
+      <value>Version Control</value>
+      <value>Commit</value>
+      <value>Project</value>
+      <value>Structure</value>
+      <value>Debug</value>
+      <value>Run</value>
+    </recentWindows>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="852" y="400" width="2000" height="1400" key="CommitChangelistDialog2.ideScale=150" timestamp="1758308976214">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state x="852" y="400" width="2000" height="1400" key="CommitChangelistDialog2.ideScale=150/0.0.3840.2160/3840.0.3840.2160@0.0.3840.2160" timestamp="1758308976214" />
+    <state x="852" y="480" key="Git.Interactive.Rebase.Dialog.ideScale=150" timestamp="1758308831239">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state x="852" y="480" key="Git.Interactive.Rebase.Dialog.ideScale=150/0.0.3840.2160/3840.0.3840.2160@0.0.3840.2160" timestamp="1758308831239" />
+    <state width="3672" height="647" key="GridCell.Tab.0.bottom" timestamp="1758299404958">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state width="3672" height="647" key="GridCell.Tab.0.bottom/0.0.3840.2160/3840.0.3840.2160@0.0.3840.2160" timestamp="1758299404958" />
+    <state width="3672" height="647" key="GridCell.Tab.0.center" timestamp="1758299404958">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state width="3672" height="647" key="GridCell.Tab.0.center/0.0.3840.2160/3840.0.3840.2160@0.0.3840.2160" timestamp="1758299404958" />
+    <state width="3672" height="647" key="GridCell.Tab.0.left" timestamp="1758299404958">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state width="3672" height="647" key="GridCell.Tab.0.left/0.0.3840.2160/3840.0.3840.2160@0.0.3840.2160" timestamp="1758299404958" />
+    <state width="3672" height="647" key="GridCell.Tab.0.right" timestamp="1758299404958">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state width="3672" height="647" key="GridCell.Tab.0.right/0.0.3840.2160/3840.0.3840.2160@0.0.3840.2160" timestamp="1758299404958" />
+    <state width="3672" height="647" key="GridCell.Tab.1.bottom" timestamp="1758299404958">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state width="3672" height="647" key="GridCell.Tab.1.bottom/0.0.3840.2160/3840.0.3840.2160@0.0.3840.2160" timestamp="1758299404958" />
+    <state width="3672" height="647" key="GridCell.Tab.1.center" timestamp="1758299404958">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state width="3672" height="647" key="GridCell.Tab.1.center/0.0.3840.2160/3840.0.3840.2160@0.0.3840.2160" timestamp="1758299404958" />
+    <state width="3672" height="647" key="GridCell.Tab.1.left" timestamp="1758299404958">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state width="3672" height="647" key="GridCell.Tab.1.left/0.0.3840.2160/3840.0.3840.2160@0.0.3840.2160" timestamp="1758299404958" />
+    <state width="3672" height="647" key="GridCell.Tab.1.right" timestamp="1758299404958">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state width="3672" height="647" key="GridCell.Tab.1.right/0.0.3840.2160/3840.0.3840.2160@0.0.3840.2160" timestamp="1758299404958" />
+    <state x="1455" y="870" key="VCS.ChangelistChooser.ideScale=150" timestamp="1758308919289">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state x="1455" y="870" key="VCS.ChangelistChooser.ideScale=150/0.0.3840.2160/3840.0.3840.2160@0.0.3840.2160" timestamp="1758308919289" />
+    <state x="1455" y="870" key="VCS.EditChangelistDialog.ideScale=150" timestamp="1758309024551">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state x="1455" y="870" key="VCS.EditChangelistDialog.ideScale=150/0.0.3840.2160/3840.0.3840.2160@0.0.3840.2160" timestamp="1758309024551" />
+    <state x="1454" y="767" key="Vcs.Push.Dialog.v2" timestamp="1758307740541">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state x="1097" y="711" width="1410" height="690" key="Vcs.Push.Dialog.v2.ideScale=150" timestamp="1758308674361">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state x="1097" y="711" width="1410" height="690" key="Vcs.Push.Dialog.v2.ideScale=150/0.0.3840.2160/3840.0.3840.2160@0.0.3840.2160" timestamp="1758308674361" />
+    <state x="1454" y="767" key="Vcs.Push.Dialog.v2/0.0.3840.2160/3840.0.3840.2160@0.0.3840.2160" timestamp="1758307740541" />
+    <state x="1562" y="952" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2.ideScale=150" timestamp="1758308358165">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state x="1562" y="952" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2.ideScale=150/0.0.3840.2160/3840.0.3840.2160@0.0.3840.2160" timestamp="1758308358165" />
+    <state x="1641" y="183" width="862" height="1089" key="find.popup" timestamp="1758307537669">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state x="1641" y="183" width="862" height="1089" key="find.popup/0.0.3840.2160/3840.0.3840.2160@0.0.3840.2160" timestamp="1758307537669" />
+    <state x="1545" y="517" width="890" height="1061" key="search.everywhere.popup" timestamp="1758307603889">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state x="1545" y="517" width="890" height="1061" key="search.everywhere.popup/0.0.3840.2160/3840.0.3840.2160@0.0.3840.2160" timestamp="1758307603889" />
+    <state x="376" y="558" key="vcs.ApplyPatchDifferentiatedDialog.ideScale=150" timestamp="1758309012111">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state x="376" y="558" key="vcs.ApplyPatchDifferentiatedDialog.ideScale=150/0.0.3840.2160/3840.0.3840.2160@0.0.3840.2160" timestamp="1758309012111" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/welcome.py" />
+    <entry file="file://$PROJECT_DIR$/notebook.ipynb" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SHOW_PREVIEW" is_vertical_split="false">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sandbox.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/warehouse/find_in_files_sample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="31" lean-forward="true" selection-start-column="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/warehouse/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/declaration_and_usages_demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git/sphinx_cat.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git/simple_cat.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git/puss_in_boots.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git/martian_cat.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
