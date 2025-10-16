@@ -1,6 +1,0 @@
-<application>
-  <component name="LLMSettings">
-    <option name="codebase_enabled_in_chat_mode" value="true" />
-    <option name="custom_chat_instruction_was_shown" value="true" />
-  </component>
-</application>

@@ -1,5 +1,0 @@
--Xmx2048m
--Dide.managed.by.toolbox=/opt/jetbrains-toolbox/bin/jetbrains-toolbox
--Dtoolbox.notification.token=ec0e82e1-80fe-4619-8adc-b63c094b861a
--Dtoolbox.notification.portFile=/home/jgarg/.cache/JetBrains/Toolbox/ports/cd82c074-537f-40ff-b836-46844de47b0f.port
--Didea.suppressed.plugins.set.selector=radler

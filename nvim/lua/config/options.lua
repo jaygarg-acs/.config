@@ -12,3 +12,7 @@ end
 vim.keymap.set("n", "<leader>t", toggle_line_numbers)
 
 vim.opt.clipboard = "unnamedplus"
+
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
