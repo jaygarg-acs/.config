@@ -5,7 +5,17 @@ return {
 			"rcarriga/nvim-dap-ui",
 			"theHamsta/nvim-dap-virtual-text",
 			"nvim-neotest/nvim-nio",
-			"mfussenegger/nvim-dap-python",
+            {
+                "mfussenegger/nvim-dap-python",
+                ft = "python",
+                rocks = { enabled = false },
+                config = function()
+                  -- use a real Linux path (your earlier path was macOS-style)
+                  -- make a venv if you want: python3 -m venv ~/.venvs/pydebug && ~/.venvs/pydebug/bin/pip install -U debugpy
+                  require("dap-python").setup("~/.venvs/pydebug/bin/python")  -- or "python3"
+                  require("dap-python").test_runner = "pytest"
+                end,
+              },
 			-- "leoluz/nvim-dap-go",
 			"williamboman/mason.nvim",
 			"jay-babu/mason-nvim-dap.nvim",

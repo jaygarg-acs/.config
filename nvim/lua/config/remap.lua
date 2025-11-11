@@ -4,8 +4,8 @@ vim.keymap.set("n", "<leader>fd", vim.cmd.Ex)
 
 -- vim.keymap.set({"n", "v"},"<C-d>", "<C-d>zz")
 -- vim.keymap.set({"n", "v"}, "<C-u>", "<C-u>zz")
-vim.keymap.set({"n", "v"}, "<C-j>", "<C-d>zz")
-vim.keymap.set({"n", "v"}, "<C-k>", "<C-u>zz")
+vim.keymap.set({"n", "v"}, "<C-Down>", "<C-d>zz")
+vim.keymap.set({"n", "v"}, "<C-Up>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzz")
 vim.keymap.set("n", "N", "Nzz")
 --vim.keymap.set("v", "<leader>p", "\"rd\"0P")
@@ -44,3 +44,18 @@ end, { expr = true, desc = "Replace visual selection with yanked text" })
 
 vim.keymap.set("v", "<leader>c", "gc", {remap = true})
 vim.keymap.set("n", "<leader>c", "gcc", {remap = true})
+
+-- Mixed/camel/Pascal → snake_case over the given range of LINES
+vim.api.nvim_create_user_command("Sn", function(opts)
+  local l1, l2 = opts.line1, opts.line2
+  -- Split ALLCAPS→Cap boundaries (XMLHttp → XML_Http) — harmless if no match
+  vim.cmd(string.format("%d,%ds/\\v([A-Z]+)([A-Z][a-z])/\\1_\\2/ge", l1, l2))
+  -- Split lower/digit→Cap boundaries (fooBar → foo_Bar)
+  vim.cmd(string.format("%d,%ds/\\v([a-z0-9])([A-Z])/\\1_\\2/ge", l1, l2))
+  -- Lowercase the whole range
+  vim.cmd(string.format("%d,%dnormal! guu", l1, l2))
+end, { range = true, desc = "Convert MixedCase to snake_case (linewise)" })
+
+-- Visual mode shortcut (linewise)
+vim.keymap.set("x", "<leader>sn", ":Sn<CR>", { desc = "MixedCase→snake_case" })
+

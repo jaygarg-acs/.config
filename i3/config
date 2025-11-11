@@ -259,12 +259,12 @@ exec --no-startup-id xrdb -merge ~/.Xresources
 
 ### --- APP → WORKSPACE ASSIGNMENTS ---
 # WezTerm (covers both common class strings)
-assign [class="WezTerm"] $ws1
-assign [class="org.wezfurlong.wezterm"] $ws1
+assign [class="edit"] $ws1
+assign [class="run"] $ws2
 
 # JetBrains IDEs
-assign [class="jetbrains-pycharm"] $ws2
-assign [class="jetbrains-clion"] $ws3
+# assign [class="jetbrains-pycharm"] $ws2
+# assign [class="jetbrains-clion"] $ws3
 
 # Distinguish the two Chrome windows via custom WM_CLASS
 assign [class="ChromeWS4"] $ws4
@@ -273,10 +273,11 @@ assign [class="ChromeWS6"] $ws6
 
 ### --- AUTOSTART ON I3 LAUNCH ---
 # Terminal
-exec --no-startup-id wezterm
+exec_always --no-startup-id ~/.local/bin/start_wezterm_once.sh edit "editor"
+exec_always --no-startup-id ~/.local/bin/start_wezterm_once.sh run  "rungrid --wait"
 
 # Editors
-exec --no-startup-id pycharm
+# exec --no-startup-id pycharm
 #exec --no-startup-id clion
 
 for_window [class="Google-chrome" title=".*Shortcut.*|.*app.shortcut.com.*"] move to workspace $ws4
@@ -302,3 +303,6 @@ bindsym $mod+c       exec clion
 # Mod+b → brand-new, separate Chrome in the *current* workspace
 bindsym $mod+b exec sh -c 'google-chrome --class=ChromeLoose --user-data-dir="$(mktemp -d /tmp/chrome-loose-XXXXXX)" --new-window'
 bindsym $mod+Tab workspace back_and_forth
+
+#lockscreen
+bindsym $mod+Shift+Escape exec i3lock --color=0c2d19

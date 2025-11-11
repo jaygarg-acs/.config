@@ -1,95 +1,71 @@
 local wezterm = require("wezterm")
 
-config = wezterm.config_builder()
+local config = wezterm.config_builder()
 
-config = {
-    disable_default_key_bindings = true,
-    disable_default_mouse_bindings = true,
-    keys = {
-            -- Copy selection to clipboard
-            { key = "C", mods = "CTRL|SHIFT", action = wezterm.action.CopyTo "Clipboard" },
-            -- Paste from clipboard
-            { key = "V", mods = "CTRL|SHIFT", action = wezterm.action.PasteFrom "Clipboard" },
-      },
-    mouse_bindings = {
-        -- Left drag = select, auto-copy on release
-        { event = { Down = { streak = 1, button = "Left" } },
-          mods = "NONE",
-          action = wezterm.action.SelectTextAtMouseCursor "Cell" },
+-- ======== GLOBAL DEFAULTS ========
+config.disable_default_key_bindings = true
+config.disable_default_mouse_bindings = true
+config.automatically_reload_config = true
+config.enable_tab_bar = false
+config.window_close_confirmation = "NeverPrompt"
+config.window_decorations = "RESIZE"
+config.default_cursor_style = "BlinkingBar"
+config.tab_bar_at_bottom = true
+config.use_fancy_tab_bar = false
+config.font = wezterm.font("Iosevka Term Nerd Font Mono", {weight="Regular"})
+config.font_size = 12.0
+config.line_height = 1.05
+config.color_scheme = "Tokyo Night Storm"--"Scarlet Protocol"  -- default fallback
+-- config.colors = {
+--     background = "#1a1c22",
+--     foreground = "#e4e6eb"
+-- }
+-- config.window_background_opacity = 0.97
+config.window_padding = { left = 5, right = 5 }
 
-        { event = { Drag = { streak = 1, button = "Left" } },
-          mods = "NONE",
-          action = wezterm.action.ExtendSelectionToMouseCursor "Cell" },
-
-        { event = { Up = { streak = 1, button = "Left" } },
-          mods = "NONE",
-          action = wezterm.action.CompleteSelection "Clipboard" },
-
-        -- Right click = paste
-        { event = { Down = { streak = 1, button = "Right" } },
-          mods = "NONE",
-          action = wezterm.action.PasteFrom "Clipboard" },
-
-          -- Scroll up/down by line
-          {
-            event = { Down = { streak = 1, button = { WheelUp = 1 } } },
-            mods = "NONE",
-            action = wezterm.action.ScrollByLine(-6),
-          },
-          {
-            event = { Down = { streak = 1, button = { WheelDown = 1 } } },
-            mods = "NONE",
-            action = wezterm.action.ScrollByLine(6),
-          },
-
-          -- Faster scroll (PageUp/PageDown style)
-          {
-            event = { Down = { streak = 3, button = { WheelUp = 1 } } },
-            mods = "NONE",
-            action = wezterm.action.ScrollByPage(-1),
-          },
-          {
-            event = { Down = { streak = 3, button = { WheelDown = 1 } } },
-            mods = "NONE",
-            action = wezterm.action.ScrollByPage(1),
-          },
-    },
-	automatically_reload_config = true,
-	enable_tab_bar = false,
-	window_close_confirmation = "NeverPrompt",
-	window_decorations = "RESIZE", -- disable the title bar but enable the resizbale border
-	default_cursor_style = "BlinkingBar",
-	tab_bar_at_bottom = true,
-	use_fancy_tab_bar = false,
-	font = wezterm.font("FiraCode Nerd Font Mono", {weight="Regular", stretch="Normal", style="Normal"}), -- (AKA: Iosevka NFM, Iosevka NFM Medium Obl) /Users/jayrgarg/Library/Fonts/IosevkaNerdFontMono-MediumOblique.ttf, CoreText --wezterm.font("JetBrains Mono", { weight = "Bold" }),
-	font_size = 12.5,
-	color_scheme = 'Red Sands (Gogh)',-- 'Dracula (Official)',--'Lunaria Light (Gogh)',--"Nord (Gogh)",
- 	background = {
-        {
-			source = {
-				--File = "/Users/jayrgarg/Pictures/backgrounds/future-city.png",
-				File = "/home/jgarg/Pictures/backgrounds/background.jpg",
-			},
-			width = "100%",
-			height = "100%",
-		},
-        {
-            source = {
-                --Color = "black",--"#282c35",
-                --Color = "#2e3440",--"#282c35",
-                Color = "#002b36",--"#282c35",
-            },
-            width = "100%",
-            height = "100%",
-            opacity = 0.80,
-        },
-    },
-	window_padding = {
-		left = 5,
-		right = 5,
---		top = 0,
---		bottom = 0,
-	},
+config.keys = {
+  { key = "C", mods = "CTRL|SHIFT", action = wezterm.action.CopyTo "Clipboard" },
+  { key = "V", mods = "CTRL|SHIFT", action = wezterm.action.PasteFrom "Clipboard" },
 }
+
+config.mouse_bindings = {
+  { event = { Down = { streak = 1, button = "Left" } }, mods = "NONE",
+    action = wezterm.action.SelectTextAtMouseCursor "Cell" },
+  { event = { Drag = { streak = 1, button = "Left" } }, mods = "NONE",
+    action = wezterm.action.ExtendSelectionToMouseCursor "Cell" },
+  { event = { Up = { streak = 1, button = "Left" } }, mods = "NONE",
+    action = wezterm.action.CompleteSelection "Clipboard" },
+  { event = { Down = { streak = 1, button = "Right" } }, mods = "NONE",
+    action = wezterm.action.PasteFrom "Clipboard" },
+  { event = { Down = { streak = 1, button = { WheelUp = 1 } } }, mods = "NONE",
+    action = wezterm.action.ScrollByLine(-6) },
+  { event = { Down = { streak = 1, button = { WheelDown = 1 } } }, mods = "NONE",
+    action = wezterm.action.ScrollByLine(6) },
+  { event = { Down = { streak = 3, button = { WheelUp = 1 } } }, mods = "NONE",
+    action = wezterm.action.ScrollByPage(-1) },
+  { event = { Down = { streak = 3, button = { WheelDown = 1 } } }, mods = "NONE",
+    action = wezterm.action.ScrollByPage(1) },
+}
+
+-- ======== PER-PROFILE OVERRIDES ========
+local profiles = {}
+
+-- 🔴 Scarlet Protocol (WS1 / “work” terminal)
+profiles.run = function(c)
+  c.color_scheme = "Scarlet Protocol"
+  c.window_background_opacity = 0.93
+end
+
+-- 💚 Cyberdyne (WS2 / “edit” terminal)
+profiles.edit = function(c)
+  c.color_scheme = "Cyberdyne"
+  c.window_background_opacity = 0.95
+end
+
+-- Apply profile based on env var
+local PROFILE = os.getenv("WEZTERM_PROFILE")
+if PROFILE and profiles[PROFILE] then
+  profiles[PROFILE](config)
+end
 
 return config
