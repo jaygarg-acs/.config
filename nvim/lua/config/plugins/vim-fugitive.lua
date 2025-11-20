@@ -160,6 +160,42 @@ return {
 
             keymap('v', '<leader>yp', paste_selection_into_result,
             { desc = "Conflict: paste VISUAL selection from side → result" })
+
+            ---------------------------------------------------------------------------
+            -- Diff navigation (no brackets) + Treesitter unmap in diff mode
+            ---------------------------------------------------------------------------
+            -- Remove Treesitter's [c / ]c only in diff windows (so native hunk jumps work)
+            vim.api.nvim_create_autocmd({ "BufWinEnter", "WinEnter" }, {
+                callback = function()
+                    if vim.wo.diff then
+                        for _, m in ipairs({ "n", "x", "o" }) do
+                            pcall(vim.keymap.del, m, "[c", { buffer = 0 })
+                            pcall(vim.keymap.del, m, "]c", { buffer = 0 })
+                        end
+                        vim.cmd("silent! diffupdate")
+                    end
+                end,
+            })
+
+            -- Leader motions that call native hunk jumps (work only in diff mode)
+            local function diff_next()
+                if vim.wo.diff then
+                    vim.cmd('keepjumps normal! ]c')
+                else
+                    vim.notify("Not in a diff window (use :Gvdiffsplit! and focus a diff pane).", vim.log.levels.WARN)
+                end
+            end
+
+            local function diff_prev()
+                if vim.wo.diff then
+                    vim.cmd('keepjumps normal! [c')
+                else
+                    vim.notify("Not in a diff window (use :Gvdiffsplit! and focus a diff pane).", vim.log.levels.WARN)
+                end
+            end
+
+            keymap('n', '<leader>dn', diff_next, { desc = "Diff: next hunk" })
+            keymap('n', '<leader>dp', diff_prev, { desc = "Diff: previous hunk" })
         end,
     },
 
@@ -193,11 +229,18 @@ return {
             })
             local km = vim.keymap.set
             km("n", "<leader>co", "<Plug>(git-conflict-ours)",          { desc = "Conflict: choose OURS" })
-            km("n", "<leader>ct", "<Plug>(git-conflict-theirs)",        { desc = "Conflict: choose THEIRS" })
+            km("n", "<leader>ct", "<Plug>(git-conflict-theirs)",        { desc = "Conflict: choose THEIRS" }) -- note: fix typo if copied
             km("n", "<leader>cb", "<Plug>(git-conflict-both)",          { desc = "Conflict: choose BOTH" })
             km("n", "<leader>c0", "<Plug>(git-conflict-none)",          { desc = "Conflict: choose NONE" })
             km("n", "<leader>cn", "<Plug>(git-conflict-next-conflict)", { desc = "Conflict: next hunk" })
             km("n", "<leader>cp", "<Plug>(git-conflict-prev-conflict)", { desc = "Conflict: previous hunk" })
+            km("n", "<leader>cr", function()
+                vim.cmd("w")
+                vim.cmd("edit!")
+                pcall(vim.cmd, "GitConflictRefresh")
+                vim.notify("Conflict view refreshed", vim.log.levels.INFO)
+            end, { desc = "Conflict: reload file & refresh conflict mode" })
+
         end
     },
 }

@@ -1,0 +1,81 @@
+# ~/.config/lazygit/config.yml
+
+gui:
+  # The default theme colors and layout
+  theme:
+    lightTheme: false
+    activeBorderColor:
+      - red 
+      - bold
+    inactiveBorderColor:
+      - white
+    selectedLineBgColor:
+      - "#1E3A8A"  # dark navy blue
+    selectedRangeBgColor:
+      - "#2A2A2A"  # optional: darker for visual selection ranges
+  # How lazygit displays panels
+  showCommandLog: false
+  showBottomLine: true
+  showPanelJumps: true
+  showIcons: true
+  nerdFontsVersion: "3"
+  expandFocusedSidePanel: true
+  mouseEvents: true
+  skipRewordInEditorWarning: true
+  editor: "nvim"
+  editorArgs: ["--"]
+git:
+  pagers:
+    - colorArg: always
+      pager: delta --dark --paging=never
+  paging:
+    externalDiffCommand: ""
+  autoFetch: false
+  autoRefresh: true
+  merge:
+    autoCommit: false
+    manualCommit: true
+  log:
+    order: topo-order
+    showGraph: always
+  branchLogCmd: "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=format:'%C(auto)%h%d %s %C(black)%C(bold)%cr%Creset %C(dim white)- %an%Creset'"
+  mainBranches:
+    - main
+    - master
+    - develop
+  skipHookPrefix: WIP
+customCommands:
+  # Example: open file in Neovim from diff view
+  - key: "o"
+    context: "files"
+    command: "nvim {{.SelectedFile.Name}}"
+    description: "Open file in Neovim"
+    output: terminal
+  # Example: run tests for current branch
+  - key: "t"
+    context: "global"
+    command: "pytest -q"
+    description: "Run tests"
+    output: terminal
+keybinding:
+  universal:
+    quit: "q"
+    nextTab: "]"
+    prevTab: "["
+    optionMenu: "?"
+    confirm: "<enter>"
+  files:
+    commitChanges: "c"
+    openFile: "o"
+  branches:
+    checkoutBranch: "<enter>"
+    mergeBranchIntoCurrent: "M"
+    deleteBranch: "d"
+os:
+  edit: "nvim"
+  editArgs: ["--"]
+  #editCommand: "nvim"
+  #!editMergeCommand: "nvim"
+  editCommandTemplate: "{{editor}} +{{line}} {{filename}}"
+promptToReturnFromSubprocess: false
+  #open: "xdg-open" # Open file or URL

@@ -59,3 +59,23 @@ end, { range = true, desc = "Convert MixedCase to snake_case (linewise)" })
 -- Visual mode shortcut (linewise)
 vim.keymap.set("x", "<leader>sn", ":Sn<CR>", { desc = "MixedCase→snake_case" })
 
+-- Show diagnostics for line under cursor
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
+-- Show diagnostics for file
+vim.keymap.set("n", "<leader>td", "<cmd>Telescope diagnostics<CR>", {
+  desc = "Telescope diagnostics"
+})
+
+-- Jump to next/previous diagnostic
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
+
+-- Populate location/quickfix list
+vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
+vim.keymap.set("n", "<leader>Q", vim.diagnostic.setqflist, { desc = "Open workspace diagnostics" })
+
+function toggle_line_numbers()
+	vim.wo.relativenumber = not vim.wo.relativenumber
+end
+vim.keymap.set("n", "<leader>ln", toggle_line_numbers)
+

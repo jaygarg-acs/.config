@@ -16,6 +16,20 @@ return {
             -- You can set root markers, keymaps-on-attach via autocmds, etc.
         })
 
+        -- Bash LSP
+        vim.lsp.config("bashls", {
+            filetypes = { "sh", "bash" },
+            -- Optional: root markers
+            root_markers = { ".git", "shell.nix", "package.json" },
+            -- Optional: custom settings
+            settings = {
+                bashIde = {
+                    shellcheckPath = "shellcheck",
+                    globPattern = "*@(.sh|.inc|.bash|.command)"
+                }
+            }
+        })
+
         -- 3) Define per-server configs
         vim.lsp.config("basedpyright", {
             -- put per-project settings here if needed
@@ -61,7 +75,7 @@ return {
         })
 
         -- 4) Enable them (auto-start when a matching buffer opens)
-        vim.lsp.enable({ "basedpyright", "ruff", "lua_ls", "clangd" })
+        vim.lsp.enable({ "basedpyright", "ruff", "lua_ls", "clangd", "bashls" })
     end,
 }
 --   {
