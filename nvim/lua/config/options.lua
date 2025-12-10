@@ -12,3 +12,10 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.shortmess:append("A")
 
+-- Simple, predictable folding powered by Treesitter
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"  -- requires nvim-treesitter
+vim.o.foldlevel = 99
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
+vim.o.foldcolumn = "0"  -- no extra gutter
