@@ -15,21 +15,26 @@ vim.api.nvim_create_autocmd('LspAttach', {
         bufmap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
 
         -- Definitions (Telescope picker; use <C-v>/<C-x>/<C-t> in the picker for split/vsplit/tab)
-        bufmap('n', 'gd', '<cmd>Telescope lsp_definitions<cr>')
+        bufmap('n', 'gd', '<cmd>Telescope lsp_definitions<cr>zz')
         -- Quick "back"
         bufmap('n', 'gb', '<C-o>')
 
         -- Declaration (usually a single jump, keep it direct)
-        bufmap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
+        bufmap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>zz')
 
         -- Implementations (picker)
-        bufmap('n', 'gi', '<cmd>Telescope lsp_implementations<cr>')
+        bufmap('n', 'gi', '<cmd>Telescope lsp_implementations<cr>zz')
 
         -- Type definition (picker)
-        bufmap('n', 'go', '<cmd>Telescope lsp_type_definitions<cr>')
+        bufmap('n', 'go', '<cmd>Telescope lsp_type_definitions<cr>zz')
 
         -- References (picker)
-        bufmap('n', 'gr', '<cmd>Telescope lsp_references<cr>')
+        bufmap('n', 'gr', function()
+          require("telescope.builtin").lsp_references({
+            sorting_strategy = "ascending",
+            initial_mode = "normal",
+          })
+        end)
 
         -- Symbols: file outline & workspace outline (pickers)
         bufmap('n', 'gS', '<cmd>Telescope lsp_document_symbols<cr>')

@@ -3,11 +3,11 @@ custom_action_command=/usr/libexec/xfce4/screenshooter/scripts/imgur-upload.sh %
 last_user=
 last_extension=png
 enable_imgur_upload=true
-show_in_folder=false
-screenshot_dir=file:///home/jgarg/Pictures
+show_in_folder=true
+screenshot_dir=file:/home/jgarg/Downloads
 action=2
 delay=0
-region=2
+region=3
 show_mouse=0
 show_border=1
 

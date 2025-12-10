@@ -3,7 +3,7 @@
 <channel name="displays" version="1.0">
   <property name="Default" type="empty">
     <property name="eDP-1" type="string" value="Laptop">
-      <property name="Active" type="bool" value="false"/>
+      <property name="Active" type="bool" value="true"/>
       <property name="EDID" type="string" value="091908bdb812d05e9ce4b64644034855b299ce4d"/>
       <property name="Resolution" type="string" value="2560x1600"/>
       <property name="RefreshRate" type="double" value="240.00020606660073"/>
@@ -20,7 +20,7 @@
       </property>
     </property>
     <property name="DP-1-1" type="string" value="LG Electronics 27&quot;">
-      <property name="Active" type="bool" value="true"/>
+      <property name="Active" type="bool" value="false"/>
       <property name="EDID" type="string" value="5645901e9839fd2cff433ea2ec90baf6fde4e624"/>
       <property name="Resolution" type="string" value="3840x2160"/>
       <property name="RefreshRate" type="double" value="60"/>
@@ -49,7 +49,7 @@
         <property name="Y" type="double" value="1"/>
       </property>
       <property name="Position" type="empty">
-        <property name="X" type="int" value="3840"/>
+        <property name="X" type="int" value="0"/>
         <property name="Y" type="int" value="0"/>
       </property>
     </property>
@@ -90,7 +90,7 @@
       </property>
     </property>
     <property name="DP-1-1" type="string" value="LG Electronics 27&quot;">
-      <property name="Active" type="bool" value="true"/>
+      <property name="Active" type="bool" value="false"/>
       <property name="EDID" type="string" value="5645901e9839fd2cff433ea2ec90baf6fde4e624"/>
       <property name="Resolution" type="string" value="3840x2160"/>
       <property name="RefreshRate" type="double" value="60"/>

@@ -73,9 +73,43 @@ return {
             -- If your compile_commands.json lives in build/, you can also set:
             -- root_markers = { "compile_commands.json", "compile_flags.txt", ".clangd" },
         })
+        -----------------------------------------------------------------------
+        -- React / JS / TS: tsserver (ts_ls)
+        -----------------------------------------------------------------------
+        -- Use "ts_ls" on newer lspconfig, "tsserver" on older.
+        local ts_name = "ts_ls"
+        local ok = pcall(require, "lspconfig.server_configurations." .. ts_name)
+        if not ok then
+            ts_name = "tsserver"
+        end
+
+        vim.lsp.config(ts_name, {
+            filetypes = {
+                "javascript",
+                "javascriptreact",
+                "typescript",
+                "typescriptreact",
+            },
+            root_markers = {
+                "package.json",
+                "tsconfig.json",
+                "jsconfig.json",
+                "pnpm-workspace.yaml",
+                "yarn.lock",
+                "package-lock.json",
+                ".git",
+            },
+            single_file_support = true,
+            -- Minimal; you can tweak `settings` later if you want
+            -- settings = { -- for typescript-language-server
+            --     typescript = { format = { enable = true } },
+            --     javascript = { format = { enable = true } },
+            -- },
+        })
+
 
         -- 4) Enable them (auto-start when a matching buffer opens)
-        vim.lsp.enable({ "basedpyright", "ruff", "lua_ls", "clangd", "bashls" })
+        vim.lsp.enable({ "basedpyright", "ruff", "lua_ls", "clangd", "bashls", ts_name })
     end,
 }
 --   {

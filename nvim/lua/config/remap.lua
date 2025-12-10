@@ -4,10 +4,26 @@ vim.keymap.set("n", "<leader>fd", vim.cmd.Ex)
 
 -- vim.keymap.set({"n", "v"},"<C-d>", "<C-d>zz")
 -- vim.keymap.set({"n", "v"}, "<C-u>", "<C-u>zz")
-vim.keymap.set({"n", "v"}, "<C-Down>", "<C-d>zz")
-vim.keymap.set({"n", "v"}, "<C-Up>", "<C-u>zz")
-vim.keymap.set("n", "n", "nzz")
-vim.keymap.set("n", "N", "Nzz")
+-- vim.keymap.set({"n", "v"}, "<C-Down>", "<C-d>zz")
+-- vim.keymap.set({"n", "v"}, "<C-Up>", "<C-u>zz")
+-- vim.keymap.set("n", "n", "nzz")
+-- vim.keymap.set("n", "N", "Nzz")
+-- Define shared options once
+local opts = { noremap = true, silent = true }
+
+-- Half-page jump + recenter
+vim.keymap.set({ "n", "v" }, "<C-Down>", "<C-d>zz", opts)
+vim.keymap.set({ "n", "v" }, "<C-Up>",   "<C-u>zz", opts)
+
+-- Next/prev search result + recenter
+vim.keymap.set("n", "n", "nzz", opts)
+vim.keymap.set("n", "N", "Nzz", opts)
+
+-- Search word and recenter
+vim.keymap.set("n", "*",  "*zz",  opts)
+vim.keymap.set("n", "#",  "#zz",  opts)
+vim.keymap.set("n", "g*", "g*zz", opts)
+vim.keymap.set("n", "g#", "g#zz", opts)
 --vim.keymap.set("v", "<leader>p", "\"rd\"0P")
 --vim.keymap.set("v", "<leader>p", "\"rd\"0p")
 --vim.keymap.set("n", "<leader>p", "\"0p")

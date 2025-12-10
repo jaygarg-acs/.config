@@ -5,16 +5,16 @@ gui:
   theme:
     lightTheme: false
     activeBorderColor:
-      - red 
+      - red
       - bold
     inactiveBorderColor:
       - white
     selectedLineBgColor:
-      - "#1E3A8A"  # dark navy blue
+      - "#1E3A8A" # dark navy blue
     selectedRangeBgColor:
-      - "#2A2A2A"  # optional: darker for visual selection ranges
+      - "#2A2A2A" # optional: darker for visual selection ranges
   # How lazygit displays panels
-  showCommandLog: false
+  showCommandLog: true
   showBottomLine: true
   showPanelJumps: true
   showIcons: true
@@ -57,6 +57,34 @@ customCommands:
     command: "pytest -q"
     description: "Run tests"
     output: terminal
+  # Fetch only
+  - key: "Z"
+    command: "git fetch"
+    context: "global"
+    loadingText: "git fetch"
+    description: "Fetch from remote"
+    output: log
+  # Prune only
+  - key: "V"
+    command: "git remote prune origin"
+    context: "global"
+    loadingText: "git remote prune origin"
+    description: "Prune stale remotes"
+    output: log
+  # Delete stale local branches (safe: -d)
+  - key: "X"
+    command: "git branch -vv | awk '/: gone]/{print $1}' | xargs -r git branch -d"
+    context: "localBranches"
+    loadingText: "Deleting merged stale local branches (-d)"
+    description: "Delete stale local branches"
+    output: log
+  # Force delete stale local branches (danger: -D)
+  - key: "C"
+    command: "git branch -vv | awk '/: gone]/{print $1}' | xargs -r git branch -D"
+    context: "localBranches"
+    loadingText: "FORCING delete of stale local branches (-D)"
+    description: "Force delete stale local branches"
+    output: log
 keybinding:
   universal:
     quit: "q"
@@ -78,4 +106,4 @@ os:
   #!editMergeCommand: "nvim"
   editCommandTemplate: "{{editor}} +{{line}} {{filename}}"
 promptToReturnFromSubprocess: false
-  #open: "xdg-open" # Open file or URL
+#open: "xdg-open" # Open file or URL

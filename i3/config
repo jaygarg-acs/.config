@@ -288,7 +288,7 @@ for_window [class="Google-chrome" title=".*ChatGPT.*|.*chatgpt.com.*"] move to w
 exec --no-startup-id google-chrome --new-window "https://app.shortcut.com/acs-engineering/dashboard" "https://github.com/allencontrolsystems/turret-vision" "https://tasks.google.com" "https://drive.google.com/drive/my-drive?dmr=1&ec=wgc-drive-hero-goto"
 
 # Chrome for WS5: Slack web
-exec --no-startup-id google-chrome --new-window "https://app.slack.com/client"
+exec --no-startup-id google-chrome --new-window "https://app.slack.com/client" "https://calendar.google.com/calendar/u/0/r"
 
 # Chrome for WS6: Gippity
 exec --no-startup-id google-chrome --new-window "https://chatgpt.com/"
@@ -306,3 +306,13 @@ bindsym $mod+Tab workspace back_and_forth
 
 #lockscreen
 bindsym $mod+Shift+Escape exec i3lock --color=0c2d19
+
+# Play / Pause
+bindsym XF86AudioPlay exec playerctl play-pause
+# Next track
+bindsym XF86AudioNext exec playerctl next
+# Previous track
+bindsym XF86AudioPrev exec playerctl previous
+
+#logitech mouse inverted scrolling
+exec --no-startup-id ~/.config/i3/startup.sh
