@@ -17,7 +17,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         -- Definitions (Telescope picker; use <C-v>/<C-x>/<C-t> in the picker for split/vsplit/tab)
         bufmap('n', 'gd', '<cmd>Telescope lsp_definitions<cr>zz')
         -- Quick "back"
-        bufmap('n', 'gb', '<C-o>')
+        -- bufmap('n', 'gb', '<C-o>')
 
         -- Declaration (usually a single jump, keep it direct)
         bufmap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>zz')

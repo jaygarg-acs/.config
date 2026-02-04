@@ -261,3 +261,4 @@ ec2-pf() {
 
 export EDITOR="nvim"
 export VISUAL="nvim"
+HISTIGNORE='*shutdown*:*poweroff*:*reboot*:*halt*'

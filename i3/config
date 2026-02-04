@@ -55,7 +55,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id rofi -show drun
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -141,26 +141,30 @@ set $ws10 "10"
 workspace $ws1 output DP-1-1
 workspace $ws2 output DP-1-1
 workspace $ws3 output DP-1-1
-workspace $ws4 output DP-1-2
-workspace $ws5 output DP-1-2
-workspace $ws6 output DP-1-2
+workspace $ws4 output DP-1-1
+workspace $ws5 output DP-1-1
+workspace $ws6 output DP-1-1
+workspace $ws7 output DP-1-2
+workspace $ws8 output DP-1-2
+workspace $ws9 output DP-1-2
+workspace $ws10 output DP-1-1
 
 # Pre-create and pin them immediately
 exec_always --no-startup-id sh -c 'i3-msg "workspace number 1; move workspace to output DP-1-1; \
 workspace number 2; move workspace to output DP-1-1; \
 workspace number 3; move workspace to output DP-1-1; \
-workspace number 4; move workspace to output DP-1-2; \
-workspace number 5; move workspace to output DP-1-2; \
-workspace number 6; move workspace to output DP-1-2; \
+workspace number 4; move workspace to output DP-1-1; \
+workspace number 5; move workspace to output DP-1-1; \
+workspace number 6; move workspace to output DP-1-1; \
 workspace number 1"'
 
 # Final settle pass after apps have launched
 exec_always --no-startup-id sh -c 'sleep 1; i3-msg "workspace number 1; move workspace to output DP-1-1; \
 workspace number 2; move workspace to output DP-1-1; \
 workspace number 3; move workspace to output DP-1-1; \
-workspace number 4; move workspace to output DP-1-2; \
-workspace number 5; move workspace to output DP-1-2; \
-workspace number 6; move workspace to output DP-1-2; \
+workspace number 4; move workspace to output DP-1-1; \
+workspace number 5; move workspace to output DP-1-1; \
+workspace number 6; move workspace to output DP-1-1; \
 workspace number 1"'
 
 # switch to workspace
@@ -285,10 +289,10 @@ for_window [class="Google-chrome" title=".*Slack.*|.*app.slack.com.*"] move to w
 for_window [class="Google-chrome" title=".*ChatGPT.*|.*chatgpt.com.*"] move to workspace $ws6
 
 # Chrome for WS4: Shortcut + Google Tasks
-exec --no-startup-id google-chrome --new-window "https://app.shortcut.com/acs-engineering/dashboard" "https://github.com/allencontrolsystems/turret-vision" "https://tasks.google.com" "https://drive.google.com/drive/my-drive?dmr=1&ec=wgc-drive-hero-goto"
+exec --no-startup-id google-chrome --new-window "https://app.shortcut.com/acs-engineering/dashboard" "https://github.com/allencontrolsystems/turret-vision/pulls/jaygarg-acs" "https://outlook.office365.com/host/0d5c91ee-5be2-4b79-81ed-23e6c4580427/ToDoId" "https://outlook.office365.com/mail/" "https://outlook.office365.com/host/377c982d-9686-450e-9a7c-22aeaf1bc162/7211f19f-262a-42eb-a02e-289956491741"
 
 # Chrome for WS5: Slack web
-exec --no-startup-id google-chrome --new-window "https://app.slack.com/client" "https://calendar.google.com/calendar/u/0/r"
+exec --no-startup-id google-chrome --new-window "https://app.slack.com/client" "https://outlook.office365.com/calendar/view/workweek"
 
 # Chrome for WS6: Gippity
 exec --no-startup-id google-chrome --new-window "https://chatgpt.com/"
@@ -301,8 +305,10 @@ bindsym $mod+t       exec wezterm
 bindsym $mod+p       exec pycharm
 bindsym $mod+c       exec clion
 # Mod+b → brand-new, separate Chrome in the *current* workspace
-bindsym $mod+b exec sh -c 'google-chrome --class=ChromeLoose --user-data-dir="$(mktemp -d /tmp/chrome-loose-XXXXXX)" --new-window'
+bindsym $mod+b exec sh -c 'google-chrome --class=Google-chrome --new-window'
 bindsym $mod+Tab workspace back_and_forth
+
+bindsym $mod+v workspace Bluetooth; exec --no-startup-id blueman-manager; exec --no-startup-id pavucontrol
 
 #lockscreen
 bindsym $mod+Shift+Escape exec i3lock --color=0c2d19

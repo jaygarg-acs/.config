@@ -95,3 +95,20 @@ function toggle_line_numbers()
 end
 vim.keymap.set("n", "<leader>ln", toggle_line_numbers)
 
+-- OVERRIDE a" TO SELECT JUST "…", NO SURROUNDING WHITESPACE
+-- Use classic Vimscript mappings for operator-pending/visual textobject
+vim.cmd([[
+  onoremap a" :<C-u>normal! F"vf"<CR>
+  xnoremap a" :<C-u>normal! F"vf"<CR>
+]])
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function()
+    vim.keymap.set(
+      "n",
+      "<leader>mp",
+      "<cmd>MarkdownPreviewToggle<cr>",
+      { buffer = true, desc = "Markdown Preview (toggle)" }
+    )
+  end,
+})

@@ -25,6 +25,43 @@ return {
             ---------------------------------------------------------------------------
             -- Fetch / pull / branches
             ---------------------------------------------------------------------------
+            -- keymap("n", "<leader>gb", ":Git blame<CR>", { desc = "Git: blame" })
+                        ---------------------------------------------------------------------------
+            -- Blame (Fugitive)
+            ---------------------------------------------------------------------------
+            local function close_fugitive_blame_windows()
+                local closed = false
+                for _, win in ipairs(vim.api.nvim_tabpage_list_wins(0)) do
+                    local buf = vim.api.nvim_win_get_buf(win)
+                    local ft = vim.api.nvim_get_option_value("filetype", { buf = buf })
+                    if ft == "fugitiveblame" then
+                        vim.api.nvim_win_close(win, true)
+                        closed = true
+                    end
+                end
+                return closed
+            end
+
+            local function toggle_blame()
+                if close_fugitive_blame_windows() then
+                    return
+                end
+                vim.cmd("Git blame")
+            end
+
+            -- Toggle blame split (since <leader>gb is branches in your setup)
+            keymap("n", "<leader>gb", toggle_blame, { desc = "Git: blame (toggle)" })
+
+            -- -- Blame current file explicitly (non-toggle)
+            -- keymap("n", "<leader>gL", ":Git blame<CR>", { desc = "Git: blame current file" })
+
+            -- In blame window: q closes, <CR> opens commit (Fugitive default behavior kept)
+            vim.api.nvim_create_autocmd("FileType", {
+                pattern = "fugitiveblame",
+                callback = function(ev)
+                    vim.keymap.set("n", "q", "<cmd>close<CR>", { buffer = ev.buf, silent = true })
+                end,
+            })
             keymap("n", "<leader>gs", vim.cmd.Git, { desc = "Git: status" })
             keymap("n", "<leader>gf", ":Git fetch origin<CR>", { desc = "Git: fetch origin" })
             keymap("n", "<leader>gp", ":Git pull<CR>", { desc = "Git: pull current branch" })
@@ -47,7 +84,7 @@ return {
             end, { desc = "Git: fetch+prune origin (with summary)" })
 
             -- Branch management
-            keymap("n", "<leader>gb", builtin.git_branches, { desc = "Git: branches (checkout with Enter)" })
+            -- keymap("n", "<leader>gb", builtin.git_branches, { desc = "Git: branches (checkout with Enter)" })
             keymap("n", "<leader>gB", function()
                 vim.cmd("Git fetch origin")
                 builtin.git_branches()
