@@ -3,7 +3,15 @@ return {
         'nvim-telescope/telescope.nvim',
         --tag = '0.1.8',
         dependencies = { 'nvim-lua/plenary.nvim' },
-
+        keys = {
+            {
+                "<leader>uC",
+                function()
+                    require("telescope.builtin").colorscheme({ enable_preview = true })
+                end,
+                desc = "Colorscheme (preview)",
+            },
+        },
         config = function()
             local telescope = require('telescope')
             local builtin   = require('telescope.builtin')

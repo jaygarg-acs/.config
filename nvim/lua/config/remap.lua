@@ -91,9 +91,17 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagn
 vim.keymap.set("n", "<leader>Q", vim.diagnostic.setqflist, { desc = "Open workspace diagnostics" })
 
 function toggle_line_numbers()
-	vim.wo.relativenumber = not vim.wo.relativenumber
+	if vim.wo.relativenumber then
+		-- Switch to absolute
+		vim.wo.relativenumber = false
+		vim.wo.number = true
+	else
+		-- Switch to relative
+		vim.wo.relativenumber = true
+		vim.wo.number = false
+	end
 end
-vim.keymap.set("n", "<leader>ln", toggle_line_numbers)
+vim.keymap.set("n", "<leader>ln", toggle_line_numbers, { desc = "toggle relative/absolute line numbers"})
 
 -- OVERRIDE a" TO SELECT JUST "…", NO SURROUNDING WHITESPACE
 -- Use classic Vimscript mappings for operator-pending/visual textobject
