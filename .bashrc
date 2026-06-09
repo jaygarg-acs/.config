@@ -100,7 +100,7 @@ alias lt='ls -arlt'
 # FZF history search
 bind -x '"\C-r": "fzf_history"'
 fzf_history() {
-    READLINE_LINE=$(history | fzf --height 40% --reverse --border)
+    READLINE_LINE=$(fc -ln 1 | sed 's/^[[:space:]]*//' | fzf --height 40% --reverse --border)
     READLINE_POINT=${#READLINE_LINE}
 }
 
@@ -262,3 +262,8 @@ ec2-pf() {
 export EDITOR="nvim"
 export VISUAL="nvim"
 HISTIGNORE='*shutdown*:*poweroff*:*reboot*:*halt*'
+
+alias wifi="nmtui"
+# Export our executables to path
+export PATH=$TURRET_VIS_DIR/executables:$PATH
+
